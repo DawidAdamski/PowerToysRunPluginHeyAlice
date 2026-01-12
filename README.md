@@ -48,7 +48,7 @@ Open new chats, access your assistants, activate skills, and view chat history i
    ```
 4. **Restart**: Open PowerToys and the plugin will be automatically loaded
 
-For detailed installation instructions, see [Installation Guide](PowerToysRunPluginHeyAlice/docs/Installation.md).
+For detailed installation instructions, see [Installation Guide](docs/Installation.md).
 
 ## 🚀 Quick Start
 
@@ -110,7 +110,7 @@ Configure your assistants and skills through PowerToys Settings:
 }
 ```
 
-For detailed configuration instructions, see [Configuration Guide](PowerToysRunPluginHeyAlice/docs/Configuration.md).
+For detailed configuration instructions, see [Configuration Guide](docs/Configuration.md).
 
 ## 🔗 Deep Links
 
@@ -146,7 +146,7 @@ https://heyalice.app/academy/deep-links-(x-scheme-url)
 .\build-and-install.ps1
 ```
 
-For detailed build instructions, see [Building Guide](PowerToysRunPluginHeyAlice/docs/Building.md).
+For detailed build instructions, see [Building Guide](docs/Building.md).
 
 ## 🐛 Troubleshooting
 
@@ -157,14 +157,14 @@ For detailed build instructions, see [Building Guide](PowerToysRunPluginHeyAlice
 - **Assistants/Skills not found**: Check your configuration JSON format
 - **Icons not displaying**: Ensure Images folder is in the plugin directory
 
-For more troubleshooting help, see [Troubleshooting Guide](PowerToysRunPluginHeyAlice/docs/Troubleshooting.md).
+For more troubleshooting help, see [Troubleshooting Guide](docs/Troubleshooting.md).
 
 ## 📚 Documentation
 
-- [Installation Guide](PowerToysRunPluginHeyAlice/docs/Installation.md) - Detailed installation instructions
-- [Configuration Guide](PowerToysRunPluginHeyAlice/docs/Configuration.md) - How to configure assistants and skills
-- [Building Guide](PowerToysRunPluginHeyAlice/docs/Building.md) - Building from source
-- [Troubleshooting Guide](PowerToysRunPluginHeyAlice/docs/Troubleshooting.md) - Common issues and solutions
+- [Installation Guide](docs/Installation.md) - Detailed installation instructions
+- [Configuration Guide](docs/Configuration.md) - How to configure assistants and skills
+- [Building Guide](docs/Building.md) - Building from source
+- [Troubleshooting Guide](docs/Troubleshooting.md) - Common issues and solutions
 
 ## 🤝 Contributing
 

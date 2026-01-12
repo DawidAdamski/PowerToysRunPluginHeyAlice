@@ -66,7 +66,7 @@ Combine both steps:
 #### Step 1: Build the Project
 
 ```powershell
-cd PowerToysRunPluginHeyAlice
+cd src
 dotnet build -c Release
 ```
 
@@ -222,7 +222,7 @@ This script:
 ### Project Structure
 
 ```
-PowerToysRunPluginHeyAlice/
+src/
 ├── Main.cs                    # Main plugin logic
 ├── plugin.json                # Plugin metadata
 ├── Community.PowerToys.Run.Plugin.HeyAlice.csproj
