@@ -1,0 +1,13 @@
+{
+  "ID": "7D94A00B6F58454F9C88552157298B5C",
+  "ActionKeyword": "al",
+  "IsGlobal": false,
+  "Name": "Hey Alice",
+  "Author": "Dawid Adamski",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/DawidAdamski/PowerToysRunPluginHeyAlice",
+  "ExecuteFileName": "Community.PowerToys.Run.Plugin.HeyAlice.dll",
+  "IcoPathDark": "Images\\HeyAlice.dark.png",
+  "IcoPathLight": "Images\\HeyAlice.light.png"
+}

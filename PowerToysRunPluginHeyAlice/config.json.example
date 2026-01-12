@@ -1,0 +1,16 @@
+{
+  "Assistants": [
+    {
+      "Name": "CommunicationGuru",
+      "Uuid": "your-assistant-uuid-here",
+      "Shortcut": "cg"
+    }
+  ],
+  "Skills": [
+    {
+      "Name": "Blog post",
+      "Uuid": "your-skill-uuid-here",
+      "Shortcut": "blog"
+    }
+  ]
+}
