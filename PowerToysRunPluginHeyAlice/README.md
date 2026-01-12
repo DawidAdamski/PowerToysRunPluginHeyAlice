@@ -1,108 +1,90 @@
-# Hey Alice Plugin for PowerToys Run
+# PowerToys Run: Hey Alice Plugin
 
-This is a plugin for [PowerToys Run](https://github.com/microsoft/PowerToys/wiki/PowerToys-Run-Overview) that allows you to quickly access the [Hey Alice](https://heyalice.app) application via deep links.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PowerToys](https://img.shields.io/badge/PowerToys-0.76.0+-blue.svg)](https://github.com/microsoft/PowerToys)
 
-## Features
+**A powerful PowerToys Run plugin that enables quick access to Hey Alice AI assistant directly from your launcher.**
 
-- **`al`** - Open a new chat in Hey Alice
-- **`al <text>`** - Open a new chat with pre-filled prompt text
-- **`alh`** or **`al h`** - Open chat history
-- **`ala`** - Open a new chat in Hey Alice
-- **`ala <shortcut/name/uuid>`** - Open new chat with a specific assistant (e.g., `ala cg`)
-- **`ala <shortcut/name/uuid> <prompt>`** - Open new chat with assistant and prompt (e.g., `ala cg odpisz Andrzejowi`)
-- **`als <shortcut/name/uuid>`** - Open a specific skill (e.g., `als blog`)
+Open new chats, access your assistants, activate skills, and view chat history instantly with PowerToys Run - no more manually opening Hey Alice and navigating through menus.
 
-**Note:** Skills do not support prompts via deep links, so `als <skill> <prompt>` is not available.
+## 🚀 Features
 
-## Installation
+- **💬 Quick Chat Access**: Launch new chats in Hey Alice with a single command
+- **🤖 Assistant Management**: Quickly switch between your configured assistants
+- **⚡ Skill Activation**: Instantly activate your favorite skills
+- **📜 History Access**: Open chat history with one command
+- **⌨️ Prompt Pre-filling**: Start conversations with pre-filled prompts
+- **⚡ Lightning Fast**: Integrated with PowerToys Run for optimal performance
+- **🎨 Native Icons**: Uses Hey Alice application icons for authentic look
+- **⚙️ Easy Configuration**: Manage assistants and skills through PowerToys Settings UI
 
-### Manual Installation
+## 📸 Screenshots
 
-1. Build the plugin (see Build section below)
-2. Copy the plugin folder to your PowerToys modules directory:
-   - Usually: `%LOCALAPPDATA%\Microsoft\PowerToys\PowerToys Run\Plugins\Community.PowerToys.Run.Plugin.HeyAlice`
-3. Restart PowerToys
+*Coming soon - screenshots will be added here*
 
-### Icons
+## 🎯 Use Cases
 
-The plugin uses icons extracted from the Hey Alice application. To update the icons:
+- **Rapid AI Access**: Start conversations with Hey Alice without opening the app
+- **Assistant Switching**: Quickly switch between different AI assistants
+- **Skill Activation**: Instantly activate specific skills for specialized tasks
+- **Workflow Integration**: Integrate Hey Alice into your daily workflow
+- **Productivity Boost**: Reduce context switching and improve efficiency
 
-```powershell
-.\extract-icon.ps1
-```
+## 📋 Requirements
 
-This script extracts the icon from `C:\Program Files\Alice\Alice.exe` and creates both light and dark versions.
+- **Windows 10/11**: Compatible with modern Windows versions
+- **PowerToys**: Minimum version 0.76.0 or higher ([Download](https://github.com/microsoft/PowerToys))
+- **Hey Alice**: Latest version of Hey Alice application installed ([Download](https://heyalice.app))
 
-## Build from Source
+## 🔧 Installation
 
-### Requirements
-- .NET 9.0 SDK or later ([Download](https://dotnet.microsoft.com/download))
-- PowerToys installed (for required DLL references)
+### Method 1: Manual Installation (Recommended)
 
-### Build using PowerShell Scripts (Recommended)
-
-The easiest way to build and install:
-
-```powershell
-# Build and install in one command
-.\build-and-install.ps1
-```
-
-Or build and install separately:
-
-```powershell
-# Build only
-.\build.ps1
-
-# Install only (after building)
-.\install.ps1
-```
-
-### Build using dotnet CLI manually
-
-1. Navigate to the plugin directory
-2. Build the project:
-   ```powershell
-   dotnet build -c Release
+1. **Download**: Get the latest release from [Releases](https://github.com/DawidAdamski/PowerToysRunPluginHeyAlice/releases)
+2. **Close PowerToys**: Ensure PowerToys is completely closed
+3. **Extract**: Unzip the archive to:
    ```
-3. Copy required DLLs from `C:\Program Files\PowerToys\` to the output directory
-4. Copy plugin files (plugin.json, Images) to the output directory
-5. Copy the built DLL to the PowerToys plugins directory
+   %LOCALAPPDATA%\Microsoft\PowerToys\PowerToys Run\Plugins\Community.PowerToys.Run.Plugin.HeyAlice
+   ```
+4. **Restart**: Open PowerToys and the plugin will be automatically loaded
 
-### Build using Visual Studio (Alternative)
+For detailed installation instructions, see [Installation Guide](docs/Installation.md).
 
-1. Clone the [PowerToys repo](https://github.com/microsoft/PowerToys) (if you haven't already)
-2. Navigate to the `PowerToys` directory
-3. Initialize submodules: `git submodule update --init --recursive`
-4. Copy this plugin folder to `PowerToys/src/modules/launcher/Plugins/Community.PowerToys.Run.Plugin.HeyAlice`
-5. Open `PowerToys.slnx` in Visual Studio
-6. Add this project to the solution
-7. Build the solution
+## 🚀 Quick Start
 
-## Usage
+1. **Activate PowerToys Run**: Press `Alt + Space` (default shortcut)
+2. **Type your command**: Start with `al` followed by your action
+3. **Select & Execute**: Choose your option and press `Enter`
 
-1. Open PowerToys Run (default shortcut is `Alt+Space`)
-2. Type `al` followed by your command:
-   - `al` - Opens a new chat
-   - `al Hello, how are you?` - Opens a new chat with "Hello, how are you?" as the prompt
-   - `alh` or `al h` - Opens chat history
-   - `ala` - Opens a new chat
-   - `ala cg` - Opens new chat with assistant with shortcut "cg" (configured in settings)
-   - `ala cg odpisz Andrzejowi` - Opens new chat with assistant "cg" and prompt "odpisz Andrzejowi"
-   - `als blog` - Opens skill with shortcut "blog" (configured in settings)
+### Basic Commands
 
-**Note:** Skills do not support prompts via deep links.
+| Command | Action |
+|---------|--------|
+| `al` | Open a new chat |
+| `al <text>` | Open new chat with pre-filled prompt |
+| `alh` or `al h` | Open chat history |
+| `ala` | Open a new chat |
+| `ala <shortcut>` | Open new chat with specific assistant |
+| `ala <shortcut> <prompt>` | Open new chat with assistant and prompt |
+| `als <shortcut>` | Open/activate a specific skill |
 
-## Configuration
+**Example:**
+```
+al How can I improve my code?
+ala cg Write a professional email
+als blog Create a blog post about AI
+```
 
-The plugin configuration is managed through PowerToys Settings UI.
+## ⚙️ Configuration
 
-### Setting up Assistants and Skills
+Configure your assistants and skills through PowerToys Settings:
 
-1. Open PowerToys Settings
-2. Go to **PowerToys Run** > **Plugins** > **Hey Alice**
-3. Find the **"Assistants and Skills Configuration"** field
-4. Enter your configuration in JSON format:
+1. Open **PowerToys Settings**
+2. Navigate to **PowerToys Run** > **Plugins** > **Hey Alice**
+3. Find **"Assistants and Skills Configuration"** field
+4. Enter your configuration in JSON format
+
+### Example Configuration
 
 ```json
 {
@@ -113,38 +95,24 @@ The plugin configuration is managed through PowerToys Settings UI.
       "Shortcut": "al"
     },
     {
-      "Name": "Example Assistant",
+      "Name": "CommunicationGuru",
       "Uuid": "your-assistant-uuid-here",
-      "Shortcut": "exa"
+      "Shortcut": "cg"
     }
   ],
   "Skills": [
     {
-      "Name": "Example Skill",
+      "Name": "Blog Writer",
       "Uuid": "your-skill-uuid-here",
-      "Shortcut": "exs"
+      "Shortcut": "blog"
     }
   ]
 }
 ```
 
-**Note:** Alice is a special assistant with UUID "alice" and is included by default in the configuration.
+For detailed configuration instructions, see [Configuration Guide](docs/Configuration.md).
 
-5. Click **Save** - the configuration will be applied immediately
-
-### Finding UUIDs
-
-- **Assistant UUID**: Go to Hey Alice Settings > Assistants, click on an assistant, and find the UUID below the assistant name
-- **Skill UUID**: Go to Hey Alice Settings > Skills, click on a skill, and find the UUID below the skill name
-
-### Configuration Format
-
-Each assistant and skill requires:
-- **Name**: Display name (e.g., "CommunicationGuru")
-- **Uuid**: The UUID from Hey Alice settings
-- **Shortcut**: Short alias to use in commands (e.g., "cg" for CommunicationGuru)
-
-## Deep Links
+## 🔗 Deep Links
 
 This plugin uses Hey Alice deep links as documented at:
 https://heyalice.app/academy/deep-links-(x-scheme-url)
@@ -161,14 +129,68 @@ https://heyalice.app/academy/deep-links-(x-scheme-url)
 | `ala <shortcut> <prompt>` | `alice://newchat?assistant=<uuid>&prompt=<prompt>` |
 | `als <shortcut>` | `alice://snippet/<uuid>` |
 
-**Note:** Skills do not support prompts via deep links (`alice://snippet/<uuid>?prompt=<prompt>` does not work).
+**Note:** Skills do not support prompts via deep links.
 
-## Requirements
+## 🛠️ Building from Source
 
-- Windows 10/11
-- PowerToys installed
-- Hey Alice application installed
+### Requirements
 
-## License
+- .NET 9.0 SDK or later ([Download](https://dotnet.microsoft.com/download))
+- PowerToys installed (for required DLL references)
+- PowerShell 5.1 or later
 
-This project is licensed under the [MIT License](LICENSE).
+### Quick Build
+
+```powershell
+# Build and install in one command
+.\build-and-install.ps1
+```
+
+For detailed build instructions, see [Building Guide](docs/Building.md).
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+- **Plugin not appearing**: Ensure PowerToys is restarted after installation
+- **Deep links not working**: Verify Hey Alice is installed and running
+- **Assistants/Skills not found**: Check your configuration JSON format
+- **Icons not displaying**: Ensure Images folder is in the plugin directory
+
+For more troubleshooting help, see [Troubleshooting Guide](docs/Troubleshooting.md).
+
+## 📚 Documentation
+
+- [Installation Guide](docs/Installation.md) - Detailed installation instructions
+- [Configuration Guide](docs/Configuration.md) - How to configure assistants and skills
+- [Building Guide](docs/Building.md) - Building from source
+- [Troubleshooting Guide](docs/Troubleshooting.md) - Common issues and solutions
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+
+## 🙏 Attribution
+
+This plugin uses deep links provided by [Hey Alice](https://heyalice.app). Special thanks to the PowerToys community and contributors.
+
+## 🏷️ Keywords
+
+`powertoys` `powertoys-run` `powertoys-plugin` `hey-alice` `alice-ai` `assistant` `ai-chat` `deep-links` `productivity` `windows` `dotnet` `csharp` `plugin-development` `launcher` `quick-access`
+
+---
+
+⭐ **Star this repository** if you find it useful!
+
+🐛 **Report issues** on our [GitHub Issues](https://github.com/DawidAdamski/PowerToysRunPluginHeyAlice/issues) page
+
+💬 **Join the discussion** in our [GitHub Discussions](https://github.com/DawidAdamski/PowerToysRunPluginHeyAlice/discussions)
