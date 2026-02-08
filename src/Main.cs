@@ -367,9 +367,6 @@ namespace Community.PowerToys.Run.Plugin.HeyAlice
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _context.API.ThemeChanged += OnThemeChanged;
             UpdateIconPath(_context.API.GetCurrentTheme());
-            
-            // Initialize with default configuration
-            LoadConfigurationFromJson(GetDefaultConfigJson());
         }
 
         private void LoadConfigurationFromJson(string json)
@@ -476,11 +473,6 @@ namespace Community.PowerToys.Run.Plugin.HeyAlice
             if (configOption != null && !string.IsNullOrWhiteSpace(configOption.TextValue))
             {
                 LoadConfigurationFromJson(configOption.TextValue);
-            }
-            else
-            {
-                // If no configuration provided, use empty config
-                _config = new PluginConfig();
             }
         }
 
